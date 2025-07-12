@@ -42,6 +42,7 @@ public:
 
 static Diagnostics diagnostics;
 static ps2::UsbTranslator<Diagnostics> keyMapping(diagnostics);
+// Using Pin 4 isstead of 3 in OriginalExample
 static ps2::Keyboard<4,2,1, Diagnostics> ps2Keyboard(diagnostics);
 static ps2::UsbKeyboardLeds ledValueLastSentToPs2 = ps2::UsbKeyboardLeds::none;
 
