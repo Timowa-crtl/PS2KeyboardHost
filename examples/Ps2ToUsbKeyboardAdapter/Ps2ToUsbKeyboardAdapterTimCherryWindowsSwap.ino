@@ -54,7 +54,8 @@ static ps2::UsbKeyboardLeds ledValueLastSentToPs2 = ps2::UsbKeyboardLeds::none;
 void setup() {
 
     ps2Keyboard.begin();
-    //ps2Keyboard.awaitStartup();
+    //activated this line after having issues with hotplugging, it seems to help!
+    ps2Keyboard.awaitStartup();
 
     BootKeyboard.begin();
 }
